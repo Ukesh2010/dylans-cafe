@@ -1,0 +1,186 @@
+// ========================================
+// Button Styles
+// ========================================
+
+@mixin base-button() {
+  text-decoration: none;
+  outline: none;
+  cursor: pointer;
+  border: 1px solid $transparent;
+  font-weight: 500;
+  height: 2.5rem;
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.35s ease, box-shadow 0.35s ease, border-color 0.35s ease, color 0.35s ease;
+  padding: 0 var(--space-sm);
+  font-family: var(--font-title);
+  font-size: var(--font-size-root);
+  border-radius: var(--border-radius-button);
+
+  .font-icon {
+    font-size: 1.25rem;
+  }
+
+  &:disabled {
+    opacity: 0.64;
+    cursor: not-allowed;
+    color: var(--color-disabled-text);
+  }
+
+  .icon-prefix {
+    margin-right: var(--space-xs);
+  }
+
+  .icon-suffix {
+    margin-left: var(--space-xs);
+  }
+
+  > span {
+    transition: margin 0.3s ease;
+  }
+
+  &.loading {
+    cursor: not-allowed;
+    opacity: 0.8;
+
+    > span {
+      margin-left: var(--space-xs);
+    }
+  }
+
+  &.btn-sm {
+    height: var(--space-lg);
+    font-size: var(--font-size-sm);
+  }
+
+  &.btn-lg {
+    height: var(--space-xl);
+    font-size: var(--font-size-md);
+  }
+
+  &.btn-xs {
+    height: var(--space-md);
+    font-size: var(--font-size-xs);
+  }
+
+  &.btn-full-width {
+    width: 100%;
+  }
+}
+
+@mixin base-icon-button() {
+  @include base-button();
+  height: 2.5rem;
+  width: 2.5rem;
+  min-width: 2.5rem;
+  padding: 0;
+  font-size: 1.25rem;
+  color: currentColor;
+
+  .font-icon {
+    font-size: inherit;
+  }
+
+  &.btn-sm {
+    height: var(--space-lg);
+    width: var(--space-lg);
+    min-width: var(--space-lg);
+    font-size: var(--font-size-md);
+  }
+
+  &.btn-xs {
+    height: var(--space-md);
+    width: var(--space-md);
+    min-width: var(--space-md);
+    font-size: var(--font-size-xs);
+  }
+
+  &:hover {
+    backdrop-filter: brightness(88%);
+    color: currentColor;
+  }
+}
+
+// ========================================
+// Button mixins (Based on CSS variables)
+// ========================================
+
+@mixin css-var-regular-button($hue, $saturation, $lightness, $textColor) {
+  background-color: hsl($hue $saturation $lightness);
+  border-color: hsl($hue $saturation calc(#{$lightness} - var(--button-border-color-lightness-difference)));
+  color: $textColor;
+  &:not(&:disabled) {
+    &:hover {
+      background-color: hsl($hue $saturation calc(#{$lightness} - var(--button-hover-backgournd-lightness-difference)));
+    }
+
+    &:active,
+    &.active {
+      background-color: hsl($hue $saturation calc(#{$lightness} - var(--button-active-background-lightness-difference)));
+      border-color: hsl($hue $saturation calc(#{$lightness} - var(--button-active-border-color-lightness-difference)));
+    }
+
+    &:focus {
+      background-color: hsl($hue $saturation calc(#{$lightness} - var(--button-focus-background-lightness-difference)));
+      box-shadow: 0 0 0.25rem 0.25rem hsla($hue $saturation $lightness / 40%);
+    }
+  }
+
+  &:disabled {
+    background-color: var(--color-disabled-background);
+    border-color: var(--color-disabled-background);
+  }
+}
+
+@mixin css-var-outline-button($hue, $saturation, $lightness) {
+  background-color: $transparent;
+  color: hsl($hue $saturation $lightness);
+  border: 1px solid hsl($hue $saturation $lightness);
+
+  &:not(&:disabled) {
+    &:hover {
+      background-color: hsl($hue $saturation $lightness / 12%);
+    }
+
+    &:active,
+    &.active {
+      background-color: hsl($hue $saturation $lightness / 16%);
+    }
+
+    &:focus {
+      background-color: hsl($hue $saturation $lightness / 12%);
+      box-shadow: 0 0 0.25rem 0.125rem hsla($hue $saturation $lightness / 40%);
+    }
+  }
+
+  &:disabled {
+    border-color: var(--color-disabled-background);
+  }
+}
+
+// ========================================
+// Button Classes
+// ========================================
+
+.btn {
+  @include base-button();
+}
+
+.icon-btn {
+  @include base-icon-button();
+  border-radius: 50% !important;
+}
+
+
+@each $color in $colorList {
+  .btn-#{$color} {
+    @include css-var-regular-button(var(--hue-#{$color}), var(--saturation-#{$color}), var(--lightness-#{$color}), var(--color-#{$color}-forground));
+  }
+
+  .btn-outline-#{$color} {
+    @include css-var-outline-button(var(--hue-#{$color}), var(--saturation-#{$color}), var(--lightness-#{$color}));
+  }
+}
+

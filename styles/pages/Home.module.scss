@@ -1,0 +1,164 @@
+// Page Home
+.page-home {
+
+  .title {
+    &.title-xl {
+      font-size: var(--space-xl);
+    }
+  }
+
+  .main {
+    margin-top: var(--space-xxl);
+    padding: 0;
+
+    @include sm() {
+      padding: 0;
+    }
+  }
+
+  // Main content body (Story | Menu )
+  .main-content-body {
+    padding: var(--space-xl) var(--space-sm);
+
+    @include sm() {
+      padding: var(--space-lg) 0;
+    }
+  }
+
+  // Header Banner
+  .banner {
+    backdrop-filter: opacity(0.24);
+    padding: 4rem var(--space-sm);
+
+    .grid-row {
+      height: 40rem;
+    }
+
+    .banner-info {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      height: 100%;
+    }
+
+    &.image-banner {
+      position: relative;
+      height: calc(100vh - 0px);
+      padding-top: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      @media (orientation: landscape) {
+        min-height: 40rem;
+      }
+
+      @media (max-height: 40rem) {
+        height: 40rem;
+      }
+
+      &:before {
+        content: '';
+        display: block;
+        background-color: hsl(var(--hue-primary) calc(var(--saturation-primary) / 6) 6%);
+        background-image: url("/images/design/bg-main.jpeg");
+        background-size: cover;
+        background-position: center center;
+        background-repeat: no-repeat;
+        position: absolute;
+        inset: 0;
+        z-index: -1;
+        filter: brightness(0.4);
+      }
+
+      .banner-info {
+        max-width: 64ch;
+        color: hsl(var(--hue-primary) var(--saturation-primary) 98%);
+        align-items: center;
+        text-align: center;
+        height: auto;
+        font-size: clamp(1rem, 2vw, 1.25rem);
+
+        .title {
+          color: inherit;
+          font-size: clamp(2.5rem, 8vw, 5rem);
+          margin-bottom: 2rem;
+          line-height: 1;
+        }
+
+        .banner-subtitle {
+          color: inherit;
+          font-size: clamp(1rem, 4vw, 1.5rem);
+          font-weight: 400;
+          max-width: 30ch;
+        }
+
+        .cta-btn {
+          margin-top: 4rem;
+          height: 4rem;
+          max-width: 20rem;
+          font-size: clamp(1rem, 2vw, 1.25rem);
+          padding-left: 2rem;
+          padding-right: 2rem;
+
+          &:hover {
+            svg {
+              animation: bounceAnim 1s forwards;
+            }
+          }
+        }
+      }
+
+      @include sm() {
+        height: 40rem;
+
+        .banner-info {
+          .title {
+            margin-bottom: 1.5rem;
+          }
+
+          .cta-btn {
+            margin-top: 2rem;
+          }
+        }
+      }
+    }
+  }
+
+
+  // Section
+  .section-container {
+    padding-top: var(--space-xxl);
+    padding-bottom: var(--space-xl);
+
+    .header {
+      display: flex;
+      flex-direction: column;
+      padding-bottom: var(--space-xl);
+
+      .title {
+        margin-bottom: 0;
+      }
+    }
+
+    @include sm() {
+      padding-top: var(--space-lg);
+      padding-bottom: var(--space-lg);
+
+      .header {
+        padding-bottom: var(--space-md);
+      }
+    }
+  }
+
+  // Story
+  .story-container {
+
+    
+  }
+
+  // Menus
+  .menu-container {
+    
+  }
+}

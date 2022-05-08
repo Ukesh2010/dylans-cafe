@@ -1,0 +1,139 @@
+h1, h2, h3, h4, h5, h6 {
+  margin-bottom: 1rem;
+  font-family: var(--font-title);
+  font-weight: 500;
+  color: var(--color-title);
+}
+
+h1 {
+  font-size: 2.5rem;
+}
+
+h2 {
+  font-size: 2rem;
+}
+
+h3 {
+  font-size: 1.75rem;
+}
+
+h4 {
+  font-size: 1.5rem;
+}
+
+h5 {
+  font-size: 1.25rem;
+}
+
+h6 {
+  font-size: 1rem;
+}
+
+h1, h2, h3 {
+  &.title {
+    line-height: 1.25;
+  }
+}
+
+p {
+  margin-bottom: 1rem;
+}
+
+.title {
+  line-height: 1.5;
+  font-family: var(--font-title);
+  font-weight: 500;
+  color: var(--color-title);
+}
+
+.title-regular {
+  font-family: var(--font-title);
+  font-weight: 500;
+}
+
+.subtitle {
+  font-size: 0.875rem;
+  color: var(--color-subtitle);
+}
+
+// ========================================
+// Text color
+// ========================================
+
+.text-muted {
+  color: var(--color-subtitle);
+}
+.text-truncate{
+}
+.text-dark {
+  color: var(--color-title);
+}
+
+@each $color in $colorList {
+  .text-#{$color} {
+    color: var(--color-#{$color});
+  }
+}
+
+// ========================================
+// font weight
+// ========================================
+
+.font-weight-normal {
+  font-weight: normal;
+}
+
+.font-weight-bold {
+  font-weight: bold;
+}
+
+// ========================================
+// Text alignment
+// ========================================
+
+.text-align-center {
+  text-align: center;
+}
+
+.text-align-right {
+  text-align: right;
+}
+
+.text-align-left {
+  text-align: left;
+}
+
+// ========================================
+// Text transforms
+// ========================================
+
+.text-uppercase {
+  text-transform: uppercase;
+}
+
+.text-capitalize {
+  text-transform: capitalize;
+}
+
+// ========================================
+// Text sizes
+// ========================================
+
+.text-smaller {
+  font-size: var(--font-size-xs);
+}
+
+.text-small {
+  font-size: var(--font-size-sm);
+}
+
+.text-regular {
+  font-size: var(--font-size-md);
+}
+
+// ========================================
+// Text wrap
+// ========================================
+.text-no-wrap {
+  white-space: nowrap;
+}

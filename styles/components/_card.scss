@@ -1,0 +1,62 @@
+@mixin card-base() {
+  position: relative;
+  background-color: var(--color-card-background);
+  box-shadow: var(--elevation-sm);
+  border-radius: var(--border-radius);
+}
+
+.card {
+  @include card-base();
+  padding: var(--card-padding);
+
+  .card-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: calc(var(--card-padding) * -1) calc(var(--card-padding) * -1) 0 calc(var(--card-padding) * -1);
+    padding: var(--card-padding);
+
+    &.with-border {
+      border-bottom: 1px solid var(--color-border);
+    }
+
+    .title {
+      margin: 0;
+    }
+  }
+
+  .card-body {
+    padding: var(--card-padding) 0 0;
+  }
+
+  .card-footer {
+    margin: 0 calc(var(--card-padding) * -1) calc(var(--card-padding) * -1) calc(var(--card-padding) * -1);
+    padding: var(--card-padding);
+
+    &.with-border {
+      border-bottom: 1px solid var(--color-border);
+    }
+  }
+
+  &.with-hover-style {
+    transition: box-shadow 0.3s ease;
+    &:hover {
+      box-shadow: var(--elevation-md);
+    }
+  }
+
+  &.elevation-flat {
+    box-shadow: none;
+    border: 1px solid var(--color-border);
+
+    &.with-hover-style {
+      cursor: pointer;
+      box-shadow: none;
+      transition: background-color .3s ease;
+
+      &:hover {
+        background-color: var(--color-card-hover-background);
+      }
+    }
+  }
+}

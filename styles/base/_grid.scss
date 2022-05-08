@@ -1,0 +1,50 @@
+// Default Column
+@mixin responsive-column-width($width, $breakpoint: default) {
+  @if ($breakpoint == xs) {
+    @media (min-width: $breakpoint-xs) {
+      grid-column: span $width;
+    }
+  } @else if ($breakpoint == sm) {
+    @media (min-width: $breakpoint-sm) {
+      grid-column: span $width;
+    }
+  } @else if ($breakpoint == md) {
+    @media (min-width: $breakpoint-md) {
+      grid-column: span $width;
+    }
+  } @else if ($breakpoint == lg) {
+    @media (min-width: $breakpoint-lg) {
+      grid-column: span $width;
+    }
+  } @else if ($breakpoint == xl) {
+    @media (min-width: $breakpoint-xl) {
+      grid-column: span $width;
+    }
+  }
+}
+
+.grid-row {
+  display: grid;
+  grid-template-columns: repeat(12, minmax(0, 1fr));
+  margin: 0 calc(var(--space-sm) * -1);
+  grid-row-gap: var(--space-sm);
+
+  > [class^="col-"], > * {
+    padding: 0 var(--space-sm);
+    grid-column: span 12;
+  }
+
+  @for $i from 1 through 12 {
+    .col-#{$i} {
+      grid-column: span $i;
+    }
+  }
+
+  @each $point in $breakpoints {
+    @for $i from 1 through 12 {
+      .col-#{$point}-#{$i} {
+        @include responsive-column-width($i, $point);
+      }
+    }
+  }
+}

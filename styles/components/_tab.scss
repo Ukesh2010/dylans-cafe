@@ -1,0 +1,181 @@
+@mixin base-line-tab-tem($hue, $saturation, $lightness) {
+  &:after {
+    background-color: hsl($hue $saturation $lightness);
+  }
+  &:hover {
+    background-color: hsl($hue $saturation $lightness / 4%);
+    color: hsl($hue $saturation $lightness);;
+  }
+
+  &.active {
+    color: hsl($hue $saturation $lightness);;
+    background-color: hsl($hue $saturation $lightness / 8%);
+  }
+}
+
+@mixin base-solid-tab-item($hue, $saturation, $lightness, $textColor) {
+  color: currentColor;
+  position: relative;
+  z-index: 1;
+
+  &:after {
+    background-color: hsl($hue $saturation $lightness);
+  }
+
+  &:hover {
+    color: hsl($hue $saturation $lightness);
+  }
+
+  &.active {
+    color: $textColor;
+    //background-color: hsl($hue $saturation $lightness);
+    //box-shadow: var(--elevation-sm);
+  }
+
+  &.tab-sm {
+    font-family: var(--font-title);
+    padding: var(--space-xss) var(--space-xs);
+    font-size: var(--font-size-sm);
+
+    .font-icon {
+      margin-right: var(--space-xs);
+    }
+  }
+
+
+  .active {
+    color: $textColor;
+    background-color: hsl($hue $saturation $lightness);
+    box-shadow: var(--elevation-sm);
+
+    position: absolute;
+    inset: 0;
+    border-radius: var(--space-xl);
+    z-index: -1;
+  }
+}
+
+.tab-container {
+  display: flex;
+  flex-wrap: wrap;
+
+  &.same-width {
+    .tab-item {
+      flex: 1 1 0 !important;
+    }
+  }
+
+  .tab-item {
+    display: inline-flex;
+    align-items: center;
+    cursor: pointer;
+    font-weight: 500;
+    position: relative;
+    transition: background .3s ease;
+    outline: none;
+    border: none;
+    background-color: transparent;
+    font-size: 1rem;
+    font-family: var(--font-title);
+    padding: var(--space-xs) var(--space-sm);
+
+    .font-icon {
+      margin-right: var(--space-xs);
+    }
+
+    &:after {
+      display: block;
+      content: '';
+      position: absolute;
+      transition: all 0.3s ease;
+      border-radius: var(--border-radius);
+    }
+  }
+
+  &.tab-line {
+    &.tab-horizontal {
+      border-bottom: 1px solid var(--color-border);
+      flex-wrap: wrap;
+
+      .tab-item {
+        @include base-line-tab-tem(var(--hue-primary), var(--saturation-primary), var(--lightness-primary));
+        justify-content: center;
+
+        &:after {
+          left: 50%;
+          bottom: 0;
+          height: 0.125rem;
+          width: 0;
+        }
+
+        &.active {
+          &:after {
+            left: 0;
+            width: 100%;
+          }
+        }
+      }
+
+      &.tab-accent {
+        .tab-item {
+          @include base-line-tab-tem(var(--hue-accent), var(--saturation-accent), var(--lightness-accent));
+        }
+      }
+    }
+
+    &.tab-vertical {
+      flex-direction: column;
+
+      .tab-item {
+        @include base-line-tab-tem(var(--hue-primary), var(--saturation-primary), var(--lightness-primary));
+
+        .font-icon {
+          margin-right: var(--space-sm);
+        }
+
+        &:after {
+          right: 0;
+          top: 50%;
+          height: 0;
+          width: 0.25rem;
+        }
+
+        &.active {
+          &:after {
+            top: 0;
+            height: 100%;
+          }
+        }
+      }
+
+      &.tab-accent {
+        .tab-item {
+          @include base-line-tab-tem(var(--hue-accent), var(--saturation-accent), var(--lightness-accent));
+        }
+      }
+    }
+  }
+
+  &.tab-solid {
+    padding: var(--space-xxs);
+    border-radius: var(--space-xl);
+    background-color: var(--color-background-3);
+
+    .tab-item {
+      @include base-solid-tab-item(var(--hue-primary), var(--saturation-primary), var(--lightness-primary), var(--color-primary-forground));
+      justify-content: center;
+      border-radius: var(--space-xl);
+      flex: 1 1 0;
+
+      .font-icon {
+        margin-right: var(--space-xs);
+      }
+    }
+
+    &.tab-accent {
+      .tab-item {
+        @include base-solid-tab-item(var(--hue-accent), var(--saturation-accent), var(--lightness-accent), var(--color-accent-forground));
+      }
+    }
+  }
+}

@@ -1,0 +1,97 @@
+// Footer
+.footer {
+  --color-footer-background: hsl(var(--hue-primary) var(--saturation-primary) calc(var(--lightness-primary)) / 6%);
+  padding: var(--space-md) 0;
+  position: relative;
+  padding-bottom: var(--space-xl);
+  background-color: var(--color-footer-background);
+
+  .footer-background-shape {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    z-index: 0;
+  }
+
+  .footer-content {
+    margin-top: 10rem;
+    margin-bottom: var(--space-xl);
+    position: relative;
+    z-index: 1;
+
+    .title {
+      font-size: var(--space-md);
+      margin-bottom: var(--space-lg);
+    }
+
+    .address-details {
+      display: flex;
+      flex-direction: column;
+      padding: 0;
+      margin-bottom: var(--space-sm);
+
+      li {
+        display: flex;
+        margin-bottom: var(--space-md);
+
+        .label {
+          flex: 0 0 2rem;
+          margin-right: var(--space-sm);
+          background-color: hsl(var(--hue-primary) var(--saturation-primary) var(--lightness-primary) / 12%);
+        }
+
+        .value {
+          flex: 1 1 auto;
+          display: inline-flex;
+          flex-direction: column;
+        }
+      }
+
+      .title {
+        margin-bottom: var(--space-xs);
+      }
+    }
+
+    .media-image {
+      position: relative;
+    }
+  }
+
+  .base-footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    height: var(--space-xl);
+    margin-top: 4rem;
+    margin-bottom: calc(var(--space-xl) * -1);
+    border-top: 1px solid hsl(var(--hue-primary) var(--saturation-primary) 12% / 12%);
+    grid-column-gap: var(--space-sm);
+
+    .logo-container {
+      display: flex;
+      align-items: center;
+      margin-right: 2rem;
+    }
+
+    @include sm() {
+      height: auto;
+      flex-direction: column;
+      grid-gap: var(--space-xs);
+      padding: 1rem;
+
+      .hide-sm {
+        display: none;
+      }
+    }
+  }
+
+  @include md() {
+    .grid-row {
+      grid-row-gap: var(--space-xxl);
+    }
+  }
+}

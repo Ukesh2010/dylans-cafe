@@ -1,0 +1,108 @@
+$form-control-animation-properties: border-color 0.3s ease, box-shadow 0.3s ease;
+
+@mixin form-control-states($hue, $saturation, $lightness) {
+  border-color: hsl($hue, $saturation, $lightness);
+
+  &:hover {
+    &:not(:disabled) {
+      border-color: hsl($hue, $saturation, $lightness);
+    }
+  }
+
+  &:focus {
+    &:not(:disabled) {
+      box-shadow: 0 0 2px 2px hsla($hue $saturation $lightness / 40%);
+      border-color: hsl($hue, $saturation, $lightness);
+    }
+  }
+}
+
+.form-group {
+  display: block;
+  position: relative;
+  padding-bottom: var(--space-md);
+
+  &.error,
+  &.has-error {
+    .inline-form-info {
+      color: var(--color-danger);
+    }
+
+    .form-control {
+      @include form-control-states(var(--hue-danger), var(--saturation-danger), var(--lightness-danger));
+    }
+  }
+
+  &.success,
+  &.has-success {
+    .inline-form-info {
+      color: var(--color-success);
+    }
+
+    .form-control {
+      @include form-control-states(var(--hue-success), var(--saturation-success), var(--lightness-success));
+    }
+  }
+}
+
+.form-label {
+  display: block;
+  margin-bottom: 0.5rem;
+  color: currentColor;
+  font-family: var(--font-title);
+}
+
+.form-control {
+  display: inline-block;
+  position: relative;
+  outline: none;
+  line-height: 1.4;
+  width: 100%;
+  transition: $form-control-animation-properties;
+  padding: var(--space-xs) var(--space-sm);
+  color: var(--color-title);
+  background-color: $transparent; //var(--color-background-2)
+  font-family: var(--font-body);
+  font-size: var(--font-size-md);
+  border: 1px solid var(--color-border-forms);
+  border-radius: var(--border-radius-button);
+
+  &:hover {
+    &:not(:disabled) {
+      border-color: var(--color-primary);
+    }
+  }
+
+  &:focus {
+    &:not(:disabled) {
+      border-color: var(--color-primary);
+      box-shadow: 0 0 2px 2px hsla(var(--hue-primary) var(--saturation-primary) var(--lightness-primary) / 40%);
+    }
+  }
+
+  &:disabled {
+    opacity: 0.64;
+    cursor: not-allowed;
+    user-select: none;
+    color: var(--color-subtitle);
+    background-color: var(--color-disabled-background);
+    border-color: var(--color-disabled-background);
+  }
+
+  &::placeholder {
+    color: var(--color-subtitle);
+    opacity: 0.64;
+  }
+
+  &.error, &.has-error {
+    @include form-control-states(var(--hue-danger), var(--saturation-danger), var(--lightness-danger));
+  }
+
+  &.success {
+    @include form-control-states(var(--hue-success), var(--saturation-success), var(--lightness-success));
+  }
+
+  &.form-control-lg {
+    padding: calc(var(--space-xs) + var(--space-xxs)) var(--space-sm);
+  }
+}

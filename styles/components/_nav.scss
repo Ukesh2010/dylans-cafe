@@ -1,0 +1,225 @@
+// Navbar
+.nav {
+  position: fixed;
+  top: 0;
+  z-index: 101;
+  width: 100%;
+  color: var(--color-true-white);
+  background-color: hsl(var(--hue-primary) var(--saturation-primary) 99% / 12%);
+
+  @supports (backdrop-filter: blur(1rem)) {
+    background-color: hsl(var(--hue-primary) var(--saturation-primary) 99% / 8%);
+    backdrop-filter: blur(var(--space-sm));
+  }
+
+  .nav-left,
+  .nav-right {
+    flex: 1 1 20%;
+    display: flex;
+    align-items: center;
+    position: relative;
+  }
+
+  .nav-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex: 1 1 auto;
+    height: var(--space-xxl);
+  }
+
+  .nav-right {
+    justify-content: flex-end;
+  }
+
+  // Logo
+  .brand-logo {
+    display: flex;
+    align-items: center;
+    position: relative;
+
+    .logo-image-block {
+      margin-right: 1.5rem;
+    }
+
+    .brand-name {
+      margin: 0;
+      color: currentColor;
+      font-size: var(--space-md);
+      display: none;
+    }
+  }
+
+  // Navigation Links
+  .nav-list {
+    display: flex;
+    align-items: center;
+    color: inherit;
+    list-style: none;
+    padding: 0;
+
+    .nav-item {
+      padding: var(--space-xs) var(--space-sm);
+      border-radius: var(--border-radius);
+      font-weight: 500;
+      cursor: pointer;
+
+      .nav-link {
+        position: relative;
+        display: block;
+        min-width: 4rem;
+        text-align: center;
+
+        &:before {
+          content: '';
+          display: block;
+          width: 100%;
+          height: 2px;
+          border-radius: 1px;
+          background-color: currentColor;
+          transition: transform 0.3s ease;
+          transform: scaleX(0);
+          position: absolute;
+          bottom: -0.5rem;
+        }
+
+        &:focus {
+          color: var(--color-primary);
+        }
+      }
+
+      &:hover {
+        color: var(--color-primary);
+
+        .nav-link {
+          &:before {
+            transform: scale(1);
+          }
+        }
+      }
+
+      &.active {
+        .nav-link {
+          &:before {
+            transform: scale(1);
+          }
+        }
+      }
+    }
+  }
+
+  // Social Icons
+  .social-icons {
+    display: flex;
+    align-items: center;
+  }
+
+  &.with-background {
+    background-color: var(--color-nav-background);
+    backdrop-filter: blur(var(--space-sm));
+    color: var(--color-true-white);
+    border-bottom: 1px solid var(--color-border);
+
+    .nav-list {
+      .nav-item {
+        .nav-link {
+          &:focus {
+            color: currentColor;
+          }
+        }
+
+        &:hover {
+          .nav-link {
+            color: currentColor;
+          }
+        }
+      }
+    }
+  }
+
+
+  // Mobile nav
+  .nav-toggle-container {
+    display: none;
+  }
+
+  .nav-toggle-btn {
+    background: transparent;
+    margin-left: var(--space-sm);
+    color: currentColor;
+    position: relative;
+    z-index: 1;
+
+    svg {
+      height: var(--space-md);
+      width: var(--space-md);
+      margin-top: var(--space-xxs);
+    }
+  }
+
+  .mobile-nav {
+    display: none;
+    transform: translateX(-100%);
+    position: fixed;
+    left: 0;
+    top: 0;
+    height: 100vh;
+    width: 100%;
+    background-color: var(--color-card-background);
+    padding-top: 4rem;
+    transition: transform 0.35s ease;
+    color: var(--color-title);
+
+    &.open {
+      transform: translateX(0);
+    }
+
+    .nav-list {
+      flex-direction: column;
+      margin: var(--space-xl) 0;
+
+      .nav-item {
+        width: 100%;
+        padding: 0.75rem var(--space-sm);
+        font-size: 1.25rem;
+        display: flex;
+        justify-content: center;
+        margin-bottom: var(--space-sm);
+      }
+    }
+  }
+
+  @include xs() {
+    display: flex;
+    align-items: center;
+
+    .mobile-nav {
+      display: block;
+    }
+
+    .nav-toggle-container {
+      display: block;
+
+      &.is-open {
+        color: var(--color-title);
+        .nav-toggle-btn {
+          svg {
+            margin-left: 0.25rem;
+          }
+        }
+      }
+    }
+
+    .nav-content {
+      .brand-logo {
+        .brand-name {
+          display: none;
+        }
+      }
+
+      .nav-list {
+        display: none;
+      }
+    }
+  }
+}
