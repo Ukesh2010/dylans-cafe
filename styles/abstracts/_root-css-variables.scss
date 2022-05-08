@@ -5,16 +5,18 @@
   --brand-hue: 7;
   --brand-saturation: 61%;
   --brand-lightness: 23%;
-  --brand-accent-hue-difference: 240;
+  --brand-accent-hue-difference: 52;
 
   --hue-primary: var(--brand-hue);
   --saturation-primary: var(--brand-saturation);
   --lightness-primary: var(--brand-lightness);
 
-  --hue-accent: calc(var(--hue-primary) + var(--brand-accent-hue-difference)); 
-  --hue-light: var(--hue-primary);
 
-  --lightness-light-mode: 32%;
+  --hue-accent: 60; 
+  --saturation-accent: 86%;
+  --lightness-accent: 44%;
+
+  --hue-light: var(--hue-primary);
 
   --color-primary: hsl(var(--hue-primary) var(--saturation-primary) var(--lightness-primary));
   --color-primary-foreground: var(--color-background-2);
@@ -40,7 +42,7 @@
   --font-size-xs: 0.75rem;
 
   --border-radius: var(--space-xs);
-  --border-radius-button: var(--space-xs);
+  --border-radius-button: var(--space-xxl);
 
   --card-padding: var(--space-md);
 
@@ -53,9 +55,6 @@
   --elevation-md: 0 2px 4px -1px rgb(0, 0, 0, 0.2), 0 4px 6px 0 rgb(0, 0, 0, 0.14), 0 2px 10px 0 rgb(0, 0, 0, 0.12);
   --elevation-lg: 0 2px 8px -1px rgb(0, 0, 0, 0.2), 0 6px 12px 0 rgb(0, 0, 0, 0.14), 0 2px 18px 0 rgb(0, 0, 0, 0.12);
   --elevation-xl: 0 12px 16px -8px rgb(0, 0, 0, 0.2), 0 24px 38px 4px rgb(0, 0, 0, 0.14), 0 8px 48px 8px rgb(0, 0, 0, 0.12);
-
-   --saturation-accent: 56%;
-   --lightness-accent: var(--lightness-light-mode);
  
    --color-title: hsl(var(--hue-primary) calc(var(--saturation-primary) / 6) 24%);
    --color-text: hsl(var(--hue-primary) calc(var(--saturation-primary) / 8) 28%);
