@@ -17,7 +17,11 @@
 
   &.custom-border {
     > span {
-      box-shadow:  0rem 0 0 1rem var(--color-main-background), -1.75rem 1.75rem 0 0rem var(--color-accent), 1.75rem -1.75rem 0 0 var(--color-accent)
+      box-shadow:  0rem 0 0 1rem var(--color-main-background), -1.75rem 1.75rem 0 0rem var(--color-accent), 1.75rem -1.75rem 0 0 var(--color-accent);
+    }
+
+    .img {
+      border-radius: var(--space-md);
     }
   }
 }

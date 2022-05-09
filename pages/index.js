@@ -22,8 +22,8 @@ export default function Home() {
             <button className="btn btn-accent cta-btn">Contact Us</button>
           </div>
         </section>
-        <section className="section-container">
-          <div className="container our-story">
+        <section className="section-container section-our-story">
+          <div className="container ">
             <div className="grid-row">
               <div className="col-sm-6">
                 <div className="image-block">
@@ -53,24 +53,104 @@ export default function Home() {
             </div>
           </div>
         </section>
-        <section className="section-container">
-          <div className="container gallery">
+        <section className="section-container section-gallery">
+          <div className="container">
             <div className="grid-row">
-              <div className="col-sm-12">Gallery Images</div>
+              <div className="col-sm-12">
+                <div className="gallery-images">
+                  <div className="media-image">
+                    <Image
+                      className="img"
+                      src={"/images/image-001.jpg"}
+                      layout="responsive"
+                      width={240}
+                      height={240}
+                      alt="food image"
+                    />
+                  </div>
+                  <div className="media-image">
+                    <Image
+                      className="img"
+                      src={"/images/image-001.jpg"}
+                      layout="responsive"
+                      width={240}
+                      height={240}
+                      alt="food image"
+                    />
+                  </div>
+                  <div className="media-image">
+                    <Image
+                      className="img"
+                      src={"/images/image-001.jpg"}
+                      layout="responsive"
+                      width={240}
+                      height={240}
+                      alt="food image"
+                    />
+                  </div>
+                  <div className="media-image">
+                    <Image
+                      className="img"
+                      src={"/images/image-001.jpg"}
+                      layout="responsive"
+                      width={240}
+                      height={240}
+                      alt="food image"
+                    />
+                  </div>
+                  <div className="media-image">
+                    <Image
+                      className="img"
+                      src={"/images/image-001.jpg"}
+                      layout="responsive"
+                      width={240}
+                      height={240}
+                      alt="food image"
+                    />
+                  </div>
+                  <div className="media-image">
+                    <Image
+                      className="img"
+                      src={"/images/image-001.jpg"}
+                      layout="responsive"
+                      width={240}
+                      height={240}
+                      alt="food image"
+                    />
+                  </div>
+                  <div className="media-image">
+                    <Image
+                      className="img"
+                      src={"/images/image-001.jpg"}
+                      layout="responsive"
+                      width={240}
+                      height={240}
+                      alt="food image"
+                    />
+                  </div>
+                  <div className="media-image">
+                    <Image
+                      className="img"
+                      src={"/images/image-001.jpg"}
+                      layout="responsive"
+                      width={240}
+                      height={240}
+                      alt="food image"
+                    />
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </section>
-        <section className="section-container">
-          <div className="container menu">
+        <section className="section-container section-menu">
+          <div className="container">
             <div className="grid-row">
-              <div className="col-sm-12">Menu Items</div>
-            </div>
-          </div>
-        </section>
-        <section className="section-container">
-          <div className="container menu">
-            <div className="grid-row">
-              <div className="col-sm-12">Testimonials</div>
+              <div className="col-sm-12">
+                <div className="header">
+                  <h2 className="title fancy-title">Menus</h2>
+                </div>
+              </div>
             </div>
           </div>
         </section>
