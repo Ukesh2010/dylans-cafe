@@ -11,6 +11,25 @@
   }
 }
 
+
+.media-image {
+  position: relative;
+
+  &.custom-border {
+    > span {
+      box-shadow:  0rem 0 0 1rem var(--color-main-background), -1.75rem 1.75rem 0 0rem var(--color-accent), 1.75rem -1.75rem 0 0 var(--color-accent);
+    }
+
+    .img {
+      border-radius: var(--space-md);
+    }
+  }
+}
+
+.fancy-title {
+  font-family: 'Oleo Script', cursive;
+}
+
 /* Product list grid view */
 
 .product-list {
@@ -52,26 +71,6 @@
       min-width: 100%;
     }
   }
-}
-
-// Logo animation
-.logo-anim {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 100vh;
-  width: 100%;
-  background-color: var(--color-main-background);
-}
-
-.loading-svg {
-  overflow: visible;
-  stroke: rgba(128, 52, 28, 1);
-  stroke-width: 8;
-  stroke-linejoin: round;
-  stroke-linecap: round;
-  height: 10rem;
-  width: 10rem;
 }
 
 .hidden {
