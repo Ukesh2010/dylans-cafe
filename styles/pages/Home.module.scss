@@ -1,14 +1,5 @@
 // Page Home
 .page-home {
-  .main {
-    margin-top: var(--space-xxl);
-    padding: 0;
-
-    @include sm() {
-      padding: 0;
-    }
-  }
-
   // Header Banner
   .banner {
     backdrop-filter: opacity(0.24);
@@ -62,35 +53,9 @@
     }
   }
 
-  // Section
-  .section-container {
-    padding: var(--space-xxl) 0;
-
-    .header {
-      display: flex;
-      flex-direction: column;
-      padding-bottom: var(--space-sm);
-
-      .title {
-        margin-bottom: 0;
-        font-size: var(--space-xl);
-        color: var(--color-primary);
-      }
-    }
-
-    @include sm() {
-      padding-top: var(--space-lg);
-      padding-bottom: var(--space-lg);
-
-      .header {
-        padding-bottom: var(--space-md);
-      }
-    }
-  }
 
   // Story
   .section-our-story {
-    font-size: calc(var(--space-xxs) + var(--space-sm));
 
     > .grid-row {
       column-gap: 4vw;

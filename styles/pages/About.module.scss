@@ -1,0 +1,9 @@
+.page-about {
+  .about-content {
+    .image-block {
+      width: calc(var(--space-xxl) * 8);
+      max-width: 100%;
+      margin: var(--space-xxl) auto 0 auto;
+    }
+  }
+}
