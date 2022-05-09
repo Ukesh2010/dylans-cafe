@@ -10,14 +10,12 @@ export default function Home() {
         <title>Dylan's Cafe</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <Nav />
-
       <main className="main">
         <section className="banner">
           <div className="container">
             <div className="info-container">
               <h1 className="title">Welcome to</h1>
-              <h1 className="title title-xl">
+              <h1 className="title title-xl fancy-title">
                 Dylan's Cafe Bar and Restaurant
               </h1>
             </div>
@@ -28,12 +26,23 @@ export default function Home() {
           <div className="container our-story">
             <div className="grid-row">
               <div className="col-sm-6">
-                <div className="media-image">
-                  <Image src={"/test.png"} layout="fill" alt="footer image" />
+                <div className="image-block">
+                  <div className="media-image custom-border">
+                    <Image
+                      className="img"
+                      src={"/images/image-001.jpg"}
+                      layout="responsive"
+                      width={320}
+                      height={320}
+                      alt="food image"
+                    />
+                  </div>
                 </div>
               </div>
               <div className="col-sm-6">
-                <h2 className="title">Our Story</h2>
+                <div className="header">
+                  <h2 className="title fancy-title">Our Story</h2>
+                </div>
                 <p>
                   Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit,
                   dolorum beatae laudantium earum expedita repellendus placeat
@@ -66,7 +75,6 @@ export default function Home() {
           </div>
         </section>
       </main>
-      <Footer />
     </div>
   );
 }
