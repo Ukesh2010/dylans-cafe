@@ -1,0 +1,61 @@
+.page-contact {
+  .header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: calc(var(--space-xxl) * 3);
+  }
+
+  .main {
+    background: url("/images/banner.jpeg") no-repeat top fixed;
+    background-size: cover;
+
+    //   background: linear-gradient(
+    //     180deg,
+    //     hsla(
+    //         var(--hue-primary),
+    //         var(--saturation-primary),
+    //         var(--lightness-primary),
+    //         0.16
+    //       )
+    //       0%,
+    //     hsla(
+    //         var(--hue-primary),
+    //         var(--saturation-primary),
+    //         var(--lightness-primary),
+    //         0.24
+    //       )
+    //       8%,
+    //     hsla(
+    //         var(--hue-primary),
+    //         var(--saturation-primary),
+    //         var(--lightness-primary),
+    //         1
+    //       )
+    //       16%,
+    //     hsla(
+    //         var(--hue-primary),
+    //         var(--saturation-primary),
+    //         var(--lightness-primary),
+    //         1
+    //       )
+    //       100%
+    //   );
+  }
+
+  .forms-container {
+    background-color: var(--color-primary);
+    padding: calc(var(--space-xl) + var(--space-sm)) 0;
+
+    .main-grid-row {
+      column-gap: var(--space-xl);
+    }
+  }
+
+  .form-control {
+    line-height: 1.5rem;
+    padding: var(--space-sm) var(--space-md);
+    background-color: var(--color-true-white);
+    border: 1px solid var(--color-primary);
+  }
+}

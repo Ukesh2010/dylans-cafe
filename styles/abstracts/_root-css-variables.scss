@@ -1,5 +1,5 @@
 // ========================================
-// Css Variables 
+// Css Variables
 // ========================================
 :root {
   --brand-hue: 7;
@@ -11,18 +11,23 @@
   --saturation-primary: var(--brand-saturation);
   --lightness-primary: var(--brand-lightness);
 
-
-  --hue-accent: 60; 
+  --hue-accent: 60;
   --saturation-accent: 82%;
   --lightness-accent: 48%;
 
   --hue-light: var(--hue-primary);
 
-  --color-primary: hsl(var(--hue-primary) var(--saturation-primary) var(--lightness-primary));
+  --color-primary: hsl(
+    var(--hue-primary) var(--saturation-primary) var(--lightness-primary)
+  );
   --color-primary-foreground: var(--color-background-2);
-  --color-accent: hsl(var(--hue-accent) var(--saturation-accent) var(--lightness-accent));
+  --color-accent: hsl(
+    var(--hue-accent) var(--saturation-accent) var(--lightness-accent)
+  );
   --color-accent-foreground: var(--color-background-2);
-  --color-true-white: hsl(var(--hue-primary) calc(var(--saturation-primary) / 8) 98%);
+  --color-true-white: hsl(
+    var(--hue-primary) calc(var(--saturation-primary) / 8) 98%
+  );
 
   --font-title: system-ui, -apple-system, sans-serif;
   --font-body: system-ui, -apple-system, sans-serif;
@@ -42,58 +47,82 @@
   --font-size-xs: 0.75rem;
 
   --border-radius: var(--space-xs);
-  --border-radius-button: var(--space-xxl);
+  --border-radius-button: var(--space-lg);
 
   --card-padding: var(--space-md);
 
-  --color-overlay-background: hsl(var(--hue-primary) calc(var(--saturation-primary) / 4) 24% / 24%);
+  --color-overlay-background: hsl(
+    var(--hue-primary) calc(var(--saturation-primary) / 4) 24% / 24%
+  );
 
   --scroll-bar-width: 0.75rem;
   --scrollbar-thumb-color: hsl(var(--hue-primary) 6% var(--lightness-primary));
 
-  --elevation-sm: 0 2px 1px -1px rgb(0, 0, 0, 0.2), 0 1px 1px 0 rgb(0, 0, 0, 0.14), 0 1px 4px 0 rgb(0, 0, 0, 0.12);
-  --elevation-md: 0 2px 4px -1px rgb(0, 0, 0, 0.2), 0 4px 6px 0 rgb(0, 0, 0, 0.14), 0 2px 10px 0 rgb(0, 0, 0, 0.12);
-  --elevation-lg: 0 2px 8px -1px rgb(0, 0, 0, 0.2), 0 6px 12px 0 rgb(0, 0, 0, 0.14), 0 2px 18px 0 rgb(0, 0, 0, 0.12);
-  --elevation-xl: 0 12px 16px -8px rgb(0, 0, 0, 0.2), 0 24px 38px 4px rgb(0, 0, 0, 0.14), 0 8px 48px 8px rgb(0, 0, 0, 0.12);
- 
-   --color-title: hsl(var(--hue-primary) calc(var(--saturation-primary) / 6) 24%);
-   --color-text: hsl(var(--hue-primary) calc(var(--saturation-primary) / 8) 28%);
-   --color-subtitle: hsl(var(--hue-primary) calc(var(--saturation-primary) / 8) 44%);
-   --color-subtitle-light: hsl(var(--hue-primary) calc(var(--saturation-primary) / 8) 60%);
-   --color-text-inverse: hsl(var(--hue-primary) calc(var(--saturation-primary) / 8) 98%);
- 
-   --color-background-1: hsl(var(--hue-primary) calc(var(--saturation-primary) / 3) 96%);
-   --color-background-2: hsl(var(--hue-primary) calc(var(--saturation-primary) / 4) 98%);
-   --color-background-3: hsl(var(--hue-primary) calc(var(--saturation-primary) / 6) 92%);
-   --color-background-4: hsl(var(--hue-primary) calc(var(--saturation-primary) / 6) 86%);
- 
-   --backgroundImage-checkbox-checked: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'%3e%3cpath fill='none' stroke='%23fff' stroke-linecap='round' stroke-linejoin='round' stroke-width='3' d='M6 10l3 3l6-6'/%3e%3c/svg%3e");
-   --backgroundImage-checkbox-indeterminate: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'%3e%3cpath fill='none' stroke='%23fff' stroke-linecap='round' stroke-linejoin='round' stroke-width='3' d='M6 10h8'/%3e%3c/svg%3e");
-   --backgroundImage-radio-checked: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3e%3ccircle r='2' fill='%23fff'/%3e%3c/svg%3e");
-   --backgroundImage-select: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3e%3cpath fill-rule='evenodd' clip-rule='evenodd' fill='%23000' d='M2.84765 7.00022C3.0646 7.00022 3.28154 7.08327 3.44679 7.24852L12 15.8017L20.5532 7.24852C20.8846 6.91717 21.4201 6.91717 21.7515 7.24852C22.0828 7.57987 22.0828 8.11545 21.7515 8.4468L12.5991 17.5991C12.2678 17.9305 11.7322 17.9305 11.4009 17.5991L2.24851 8.4468C1.91716 8.11545 1.91716 7.57987 2.24851 7.24852C2.41376 7.08327 2.63071 7.00022 2.84765 7.00022Z'/%3e%3c/svg%3e");
-   --backgroundImage-search-close: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3e%3cpath fill-rule='evenodd' clip-rule='evenodd' fill='%23444' d='M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM5.354 4.646a.5.5 0 1 0-.708.708L7.293 8l-2.647 2.646a.5.5 0 0 0 .708.708L8 8.707l2.646 2.647a.5.5 0 0 0 .708-.708L8.707 8l2.647-2.646a.5.5 0 0 0-.708-.708L8 7.293 5.354 4.646z'/%3e%3c/svg%3e");
- 
-   --color-main-background: var(--color-background-1);
- 
-   --color-border: var(--color-background-4);
- 
-   --color-card-background: var(--color-background-2);
-   --color-card-hover-background: var(--color-background-3);
- 
-   --button-border-color-lightness-difference: 4%;
-   --button-hover-background-lightness-difference: 8%;
-   --button-active-border-color-lightness-difference: 12%;
-   --button-active-background-lightness-difference: 16%;
-   --button-focus-background-lightness-difference: 8%;
- 
-   --color-disabled-background: hsl(var(--hue-primary) calc(var(--saturation-primary) / 8) 88%);
-   --color-disabled-text: hsl(var(--hue-primary) calc(var(--saturation-primary) / 8) 64%);
- 
-   --color-form-border: hsl(var(--hue-primary) calc(var(--saturation-primary) / 4) 80%);
- 
-   --color-nav-background: var(--color-primary);
+  --elevation-sm: 0 2px 1px -1px rgb(0, 0, 0, 0.2),
+    0 1px 1px 0 rgb(0, 0, 0, 0.14), 0 1px 4px 0 rgb(0, 0, 0, 0.12);
+  --elevation-md: 0 2px 4px -1px rgb(0, 0, 0, 0.2),
+    0 4px 6px 0 rgb(0, 0, 0, 0.14), 0 2px 10px 0 rgb(0, 0, 0, 0.12);
+  --elevation-lg: 0 2px 8px -1px rgb(0, 0, 0, 0.2),
+    0 6px 12px 0 rgb(0, 0, 0, 0.14), 0 2px 18px 0 rgb(0, 0, 0, 0.12);
+  --elevation-xl: 0 12px 16px -8px rgb(0, 0, 0, 0.2),
+    0 24px 38px 4px rgb(0, 0, 0, 0.14), 0 8px 48px 8px rgb(0, 0, 0, 0.12);
+
+  --color-title: hsl(
+    var(--hue-primary) calc(var(--saturation-primary) / 6) 24%
+  );
+  --color-text: hsl(var(--hue-primary) calc(var(--saturation-primary) / 8) 28%);
+  --color-subtitle: hsl(
+    var(--hue-primary) calc(var(--saturation-primary) / 8) 44%
+  );
+  --color-subtitle-light: hsl(
+    var(--hue-primary) calc(var(--saturation-primary) / 8) 60%
+  );
+  --color-text-inverse: hsl(
+    var(--hue-primary) calc(var(--saturation-primary) / 8) 98%
+  );
+
+  --color-background-1: hsl(
+    var(--hue-primary) calc(var(--saturation-primary) / 3) 96%
+  );
+  --color-background-2: hsl(
+    var(--hue-primary) calc(var(--saturation-primary) / 4) 98%
+  );
+  --color-background-3: hsl(
+    var(--hue-primary) calc(var(--saturation-primary) / 6) 92%
+  );
+  --color-background-4: hsl(
+    var(--hue-primary) calc(var(--saturation-primary) / 6) 86%
+  );
+
+  --backgroundImage-checkbox-checked: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'%3e%3cpath fill='none' stroke='%23fff' stroke-linecap='round' stroke-linejoin='round' stroke-width='3' d='M6 10l3 3l6-6'/%3e%3c/svg%3e");
+  --backgroundImage-checkbox-indeterminate: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'%3e%3cpath fill='none' stroke='%23fff' stroke-linecap='round' stroke-linejoin='round' stroke-width='3' d='M6 10h8'/%3e%3c/svg%3e");
+  --backgroundImage-radio-checked: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3e%3ccircle r='2' fill='%23fff'/%3e%3c/svg%3e");
+  --backgroundImage-select: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3e%3cpath fill-rule='evenodd' clip-rule='evenodd' fill='%23000' d='M2.84765 7.00022C3.0646 7.00022 3.28154 7.08327 3.44679 7.24852L12 15.8017L20.5532 7.24852C20.8846 6.91717 21.4201 6.91717 21.7515 7.24852C22.0828 7.57987 22.0828 8.11545 21.7515 8.4468L12.5991 17.5991C12.2678 17.9305 11.7322 17.9305 11.4009 17.5991L2.24851 8.4468C1.91716 8.11545 1.91716 7.57987 2.24851 7.24852C2.41376 7.08327 2.63071 7.00022 2.84765 7.00022Z'/%3e%3c/svg%3e");
+  --backgroundImage-search-close: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3e%3cpath fill-rule='evenodd' clip-rule='evenodd' fill='%23444' d='M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM5.354 4.646a.5.5 0 1 0-.708.708L7.293 8l-2.647 2.646a.5.5 0 0 0 .708.708L8 8.707l2.646 2.647a.5.5 0 0 0 .708-.708L8.707 8l2.647-2.646a.5.5 0 0 0-.708-.708L8 7.293 5.354 4.646z'/%3e%3c/svg%3e");
+
+  --color-main-background: var(--color-background-1);
+
+  --color-border: var(--color-background-4);
+
+  --color-card-background: var(--color-background-2);
+  --color-card-hover-background: var(--color-background-3);
+
+  --button-border-color-lightness-difference: 4%;
+  --button-hover-background-lightness-difference: 8%;
+  --button-active-border-color-lightness-difference: 12%;
+  --button-active-background-lightness-difference: 16%;
+  --button-focus-background-lightness-difference: 8%;
+
+  --color-disabled-background: hsl(
+    var(--hue-primary) calc(var(--saturation-primary) / 8) 88%
+  );
+  --color-disabled-text: hsl(
+    var(--hue-primary) calc(var(--saturation-primary) / 8) 64%
+  );
+
+  --color-form-border: hsl(
+    var(--hue-primary) calc(var(--saturation-primary) / 4) 80%
+  );
+
+  --color-nav-background: var(--color-primary);
 }
-
-
-
- 
