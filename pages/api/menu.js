@@ -396,6 +396,222 @@ export const jsonData = [
       },
     ],
   },
+  {
+    name: "Curry",
+    description: null,
+    items: [
+      {
+        name: "Dal Fry",
+        price: "7.99",
+        description:
+          "Popular lentil recipe from nepasese streets which is then sautéed in a masala made of onion, tomato, ginger, garlic, and spices in ghee or oil.",
+      },
+      {
+        name: "JeeraAloo",
+        price: "6.99",
+        description:
+          "Jeera aloo(Cumin crushed potatoes), a flavourful & delicious North Indian side dish made with potatoes, spices and herbs.",
+      },
+      {
+        name: "Daal makhani",
+        price: "10.00",
+        description:
+          "Slow cooked delicious, rich & creamy dish made with black lentils, spices, butter and cream",
+      },
+      {
+        name: "Matar paneer",
+        price: "8.99",
+        description:
+          "Cottage cheese cooked in Nepalese spiced creamy masala sauce and green peas ",
+      },
+      {
+        name: "Chicken Dilwala",
+        price: "9.99",
+        description:
+          "Tender grill chicken in a rich, makhani sauce with spice and full of flavour.",
+      },
+      {
+        name: "Rara Gosht ",
+        price: "10.99",
+        description:
+          "A festive dish with roots in Northern India’s Mughlai cuisine. Tender pieces of mutton in a sumptuous gravy perfumed with black cumin, green and black cardamom, mace and cinnamon – fueled a passionate yet ultimately futile quest to taste it again",
+      },
+      {
+        name: "Khasi ko Jhol (Goat meat curry)",
+        price: "10.99",
+        description:
+          "Flavorful Nepalese home style goat curry. To enhance the flavours of the dish, it is  combined with flavourings such as garam masala, chilli, turmeric, cloves, and cinnamon",
+      },
+      {
+        name: "Chicken tak a tak",
+        price: "8.99",
+        description:
+          "Chargrilled chicken cooked with onion ,tomatoes ,peppers and chefs secret spices.",
+      },
+      {
+        name: "Chicken/lambDhansak",
+        price: "9.99/10.99",
+        description:
+          "A popular Indian curry made from chicken or lamb , lentils and flavoured with spices. Tangy, sweet and rich dish.",
+      },
+      {
+        name: "Bhindi masala",
+        price: "9.99",
+        description: "Okra cooked in onion and tomato based masala.",
+      },
+      {
+        name: "Chicken/Lamb Dopiaza",
+        price: "9.99/10.99",
+        description:
+          "Asian family recipes, typically meat-based, that contain onions as a major ingredient",
+      },
+    ],
+  },
+  {
+    name: "Salad",
+    description: null,
+    items: [
+      {
+        name: "Noodle salad ",
+        price: "4.50",
+        description: null,
+      },
+      {
+        name: "Green salad",
+        price: "3.50",
+        description: null,
+      },
+      {
+        name: "Onion and chilli Salad",
+        price: "2.50",
+        description: null,
+      },
+    ],
+  },
+  {
+    name: "Indian classic",
+    description:
+      "You choose , We cook your all time favourite. Choose your vegetable or meat",
+    items: [
+      {
+        name: "Paneer",
+        price: "8.95",
+        description: null,
+      },
+      {
+        name: "chicken",
+        price: "9.89",
+        description: null,
+      },
+      {
+        name: "lamb",
+        price: "9.99",
+        description: null,
+      },
+      {
+        name: "prawns",
+        price: "12.95",
+        description: null,
+      },
+    ],
+    cookingStyle: [
+      "Curry/Madras",
+      "Karahi",
+      "Korma",
+      "Bhuna",
+      "Jalfrezi",
+      "Saag/methi",
+      "Vindaloo",
+      "Butter Masala",
+    ],
+  },
+  {
+    name: "Rice",
+    description: null,
+    items: [
+      {
+        name: "Lamb biryani",
+        price: "11.99",
+        description: null,
+      },
+      {
+        name: "Chicken biryani",
+        price: "10.99",
+        description: null,
+      },
+      {
+        name: "Fried Rice",
+        price: "4.50",
+        description: "(veg/Egg/Mushroom/chicken)",
+      },
+      {
+        name: "Pulao Rice",
+        price: "4.00",
+        description: null,
+      },
+      {
+        name: "Basmati Rice",
+        price: "3.50",
+        description: null,
+      },
+    ],
+  },
+  {
+    name: "House baked Bread",
+    description: null,
+    items: [
+      {
+        name: "Plain naan",
+        price: "2.20",
+        description: null,
+      },
+      {
+        name: "Garlic naan",
+        price: "2.50",
+        description: null,
+      },
+      {
+        name: "Butter naan",
+        price: "2.75",
+        description: null,
+      },
+      {
+        name: "Keema naan",
+        price: "3.25",
+        description: null,
+      },
+      {
+        name: "Cheese naan",
+        price: "3.25",
+        description: null,
+      },
+      {
+        name: "Sweet & nutty naan",
+        price: "3.25",
+        description: null,
+      },
+      {
+        name: "Tandoori Roti",
+        price: "1.99",
+        description: null,
+      },
+      {
+        name: "Lachha paratha",
+        price: "2.75",
+        description: null,
+      },
+      {
+        name: "Aloo Kulchha ",
+        price: "3.00",
+        description: null,
+      },
+      {
+        name: "Bhatura",
+        price: "2.50",
+        description: null,
+      },
+    ],
+  },
 ];
 
 export const getMenus = async () => {
