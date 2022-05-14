@@ -57,7 +57,7 @@ export default function Home() {
           <div className="container">
             <div className="grid-row">
               <div className="col-sm-12">
-                <div className="gallery-images">
+                <div className="gallery-container">
                   <div className="media-image">
                     <Image
                       className="img"

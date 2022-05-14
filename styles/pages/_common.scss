@@ -114,3 +114,25 @@
   overflow: hidden;
   margin-top: -100%;
 }
+
+.gallery-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(15rem, 1fr));
+  gap: var(--space-md);
+
+  .media-image {
+    cursor: pointer;
+    border-radius: var(--space-md);
+    overflow: hidden;
+
+    .img {
+      transition: transform 0.35s ease;
+    }
+
+    &:hover {
+      .img {
+        transform: scale(1.25);
+      }
+    }
+  }
+}
