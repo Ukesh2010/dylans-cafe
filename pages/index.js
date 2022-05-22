@@ -1,7 +1,7 @@
 import Head from "next/head";
 import Image from "next/image";
-import Footer from "../components/footer";
-import Nav from "../components/nav";
+import GalleryImages from "../components/galleryImages";
+import ReviewCard from "../components/reviewCard";
 
 export default function Home() {
   return (
@@ -81,88 +81,7 @@ export default function Home() {
           <div className="container">
             <div className="grid-row">
               <div className="col-sm-12">
-                <div className="gallery-container">
-                  <div className="media-image">
-                    <Image
-                      className="img"
-                      src={"/images/image-001.jpg"}
-                      layout="responsive"
-                      width={240}
-                      height={240}
-                      alt="food image"
-                    />
-                  </div>
-                  <div className="media-image">
-                    <Image
-                      className="img"
-                      src={"/images/image-001.jpg"}
-                      layout="responsive"
-                      width={240}
-                      height={240}
-                      alt="food image"
-                    />
-                  </div>
-                  <div className="media-image">
-                    <Image
-                      className="img"
-                      src={"/images/image-001.jpg"}
-                      layout="responsive"
-                      width={240}
-                      height={240}
-                      alt="food image"
-                    />
-                  </div>
-                  <div className="media-image">
-                    <Image
-                      className="img"
-                      src={"/images/image-001.jpg"}
-                      layout="responsive"
-                      width={240}
-                      height={240}
-                      alt="food image"
-                    />
-                  </div>
-                  <div className="media-image">
-                    <Image
-                      className="img"
-                      src={"/images/image-001.jpg"}
-                      layout="responsive"
-                      width={240}
-                      height={240}
-                      alt="food image"
-                    />
-                  </div>
-                  <div className="media-image">
-                    <Image
-                      className="img"
-                      src={"/images/image-001.jpg"}
-                      layout="responsive"
-                      width={240}
-                      height={240}
-                      alt="food image"
-                    />
-                  </div>
-                  <div className="media-image">
-                    <Image
-                      className="img"
-                      src={"/images/image-001.jpg"}
-                      layout="responsive"
-                      width={240}
-                      height={240}
-                      alt="food image"
-                    />
-                  </div>
-                  <div className="media-image">
-                    <Image
-                      className="img"
-                      src={"/images/image-001.jpg"}
-                      layout="responsive"
-                      width={240}
-                      height={240}
-                      alt="food image"
-                    />
-                  </div>
-                </div>
+                <GalleryImages />
               </div>
             </div>
           </div>
@@ -171,8 +90,42 @@ export default function Home() {
           <div className="container">
             <div className="grid-row">
               <div className="col-sm-12">
-                <div className="header">
+                <div className="header text-align-center">
                   <h2 className="title title-lg fancy-title">Menus</h2>
+                </div>
+                <p className="subtitle-xl text-align-center">
+                  Please call us on
+                  {"  "}
+                  <a
+                    href="tel:01634817772"
+                    className={"link-accent text-accent with-decoration"}
+                  >
+                    01634 817772
+                  </a>
+                  {"  "}
+                  for collection.
+                  <br />
+                  For home delivery please contact our delivery partners ( Just
+                  Eat, Uber Eat and Deliveroo).
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section className="section-container section-reviews">
+          <div className="container">
+            <div className="grid-row">
+              <div className="col-sm-12">
+                <div className="header">
+                  <h2 className="title title-lg fancy-title text-align-center">
+                    Reviews
+                  </h2>
+                </div>
+                <div className="review-cards-container">
+                  <ReviewCard />
+                  <ReviewCard />
+                  <ReviewCard />
                 </div>
               </div>
             </div>

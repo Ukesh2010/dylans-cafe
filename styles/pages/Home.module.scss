@@ -53,10 +53,8 @@
     }
   }
 
-
   // Story
   .section-our-story {
-
     > .grid-row {
       column-gap: 4vw;
 
@@ -79,7 +77,12 @@
   }
 
   .section-gallery {
-    background-color: hsla(var(--hue-primary), var(--saturation-primary), var(--lightness-primary), 0.16);
+    background-color: hsla(
+      var(--hue-primary),
+      var(--saturation-primary),
+      var(--lightness-primary),
+      0.16
+    );
     .gallery-images {
       display: grid;
       grid-template-columns: repeat(auto-fill, minmax(15rem, 1fr));
@@ -99,6 +102,20 @@
       .title {
         color: inherit;
       }
+    }
+
+    .subtitle-xl {
+      margin-top: var(--space-lg);
+    }
+  }
+
+  .section-reviews {
+    .review-cards-container {
+      margin-top: var(--space-lg);
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+      gap: var(--space-md);
+      align-items: center;
     }
   }
 }

@@ -1,0 +1,26 @@
+.review-card {
+  display: flex;
+  gap: var(--space-md);
+
+  .avatar {
+    flex: 0 0 var(--space-xxl);
+  }
+
+  .content {
+    flex: 1;
+  }
+}
+
+.avatar {
+  height: var(--space-xxl);
+  width: var(--space-xxl);
+  border-radius: 50%;
+  background-color: var(--color-primary);
+  overflow: hidden;
+
+  > img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+  }
+}

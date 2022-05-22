@@ -31,6 +31,10 @@
   font-family: "Abril Fatface", cursive;
 }
 
+.subtitle-xl {
+  font-size: calc(var(--space-md));
+}
+
 .subtitle-lg {
   font-size: calc(var(--space-sm) * 1.125);
 }

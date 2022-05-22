@@ -38,6 +38,12 @@ a {
       color: var(--color-accent);
     }
   }
+
+  &.with-decoration {
+    &:hover {
+      text-decoration: underline;
+    }
+  }
 }
 
 svg {
