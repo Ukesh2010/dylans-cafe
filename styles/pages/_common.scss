@@ -11,13 +11,14 @@
   }
 }
 
-
 .media-image {
   position: relative;
 
   &.custom-border {
     > span {
-      box-shadow:  0rem 0 0 1rem var(--color-main-background), -1.75rem 1.75rem 0 0rem var(--color-accent), 1.75rem -1.75rem 0 0 var(--color-accent);
+      box-shadow: 0rem 0 0 1rem var(--color-main-background),
+        -1.75rem 1.75rem 0 0rem var(--color-accent),
+        1.75rem -1.75rem 0 0 var(--color-accent);
     }
 
     .img {
@@ -27,7 +28,41 @@
 }
 
 .fancy-title {
-  font-family: 'Oleo Script', cursive;
+  font-family: "Abril Fatface", cursive;
+}
+
+.subtitle-lg {
+  font-size: calc(var(--space-xxs) + var(--space-sm));
+}
+
+.title-lg {
+  margin-bottom: 0;
+  font-size: var(--space-xl);
+  color: var(--color-primary);
+}
+
+// Section
+.section-container {
+  padding: var(--space-xxl) 0;
+
+  .title {
+    color: var(--color-primary);
+  }
+
+  .header {
+    display: flex;
+    flex-direction: column;
+    padding-bottom: var(--space-sm);
+  }
+
+  @include sm() {
+    padding-top: var(--space-lg);
+    padding-bottom: var(--space-lg);
+
+    .header {
+      padding-bottom: var(--space-md);
+    }
+  }
 }
 
 /* Product list grid view */
@@ -43,15 +78,13 @@
   overflow: hidden !important;
 }
 
-
 // Main body container
 .main {
-  overflow: hidden;
-  margin-top: 4rem;
-  padding: var(--space-xl) var(--space-sm);
+  margin-top: var(--space-xxl);
+  padding: 0;
 
   @include sm() {
-    padding: var(--space-lg) 0;
+    padding: 0;
   }
 }
 
@@ -80,4 +113,26 @@
   visibility: hidden;
   overflow: hidden;
   margin-top: -100%;
+}
+
+.gallery-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(15rem, 1fr));
+  gap: var(--space-md);
+
+  .media-image {
+    cursor: pointer;
+    border-radius: var(--space-md);
+    overflow: hidden;
+
+    .img {
+      transition: transform 0.35s ease;
+    }
+
+    &:hover {
+      .img {
+        transform: scale(1.25);
+      }
+    }
+  }
 }

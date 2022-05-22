@@ -41,9 +41,9 @@ export default function Home() {
               </div>
               <div className="col-sm-6">
                 <div className="header">
-                  <h2 className="title fancy-title">Our Story</h2>
+                  <h2 className="title title-lg fancy-title">Our Story</h2>
                 </div>
-                <p>
+                <p className="subtitle-lg">
                   Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit,
                   dolorum beatae laudantium earum expedita repellendus placeat
                   voluptatem praesentium excepturi animi ullam, cumque inventore
@@ -57,7 +57,7 @@ export default function Home() {
           <div className="container">
             <div className="grid-row">
               <div className="col-sm-12">
-                <div className="gallery-images">
+                <div className="gallery-container">
                   <div className="media-image">
                     <Image
                       className="img"
@@ -148,7 +148,7 @@ export default function Home() {
             <div className="grid-row">
               <div className="col-sm-12">
                 <div className="header">
-                  <h2 className="title fancy-title">Menus</h2>
+                  <h2 className="title title-lg fancy-title">Menus</h2>
                 </div>
               </div>
             </div>

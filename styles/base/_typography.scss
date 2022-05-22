@@ -1,4 +1,9 @@
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   margin-bottom: 1rem;
   font-family: var(--font-title);
   font-weight: 500;
@@ -29,7 +34,9 @@ h6 {
   font-size: 1rem;
 }
 
-h1, h2, h3 {
+h1,
+h2,
+h3 {
   &.title {
     line-height: 1.25;
   }
@@ -63,8 +70,13 @@ p {
 .text-muted {
   color: var(--color-subtitle);
 }
-.text-truncate{
+
+.text-truncate {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
+
 .text-dark {
   color: var(--color-title);
 }
@@ -119,16 +131,28 @@ p {
 // Text sizes
 // ========================================
 
-.text-smaller {
+.text-xs {
   font-size: var(--font-size-xs);
 }
 
-.text-small {
+.text-sm {
   font-size: var(--font-size-sm);
 }
 
-.text-regular {
+.text-md {
   font-size: var(--font-size-md);
+}
+
+.text-lg {
+  font-size: var(--space-lg);
+}
+
+.text-xl {
+  font-size: var(--space-xl);
+}
+
+.text-xxl {
+  font-size: var(--space-xxl);
 }
 
 // ========================================
