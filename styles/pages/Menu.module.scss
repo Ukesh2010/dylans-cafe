@@ -9,6 +9,8 @@
     .category-item {
       padding: calc(var(--space-sm) + var(--space-xxs)) var(--space-sm);
       background-color: var(--color-background-3);
+      position: sticky;
+      top: 0;
 
       .title {
         margin-bottom: 0;

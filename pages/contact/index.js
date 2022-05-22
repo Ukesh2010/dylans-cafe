@@ -16,14 +16,21 @@ export default function Contact() {
         <section className="section-container">
           <div className="container">
             <div className="contact-info-header">
-              <h3 className="title fancy-title">
+              <h3 className="title">
                 For Orders & Collection Please Contact Us
               </h3>
-              <a href="tel:01634817772" className="text-xl link-accent">
+              <a
+                href="tel:01634817772"
+                className="text-xl fancy-title link-accent"
+              >
                 01634817772
               </a>
+              <p className="subtitle-lg">
+                For home delivery please contact our delivery partners ( Just
+                Eat, Uber Eat and Deliveroo )
+              </p>
               <div className="address-block">
-                <h4 className="title fancy-title">Address</h4>
+                <h3 className="title fancy-title">Address</h3>
                 <p className="text-md">56 Chatham High Street Kent ME4 4DS</p>
               </div>
             </div>
@@ -40,7 +47,7 @@ export default function Contact() {
                 <div className="col-md-6">
                   <form className="form">
                     <div className="form-group">
-                      <div className="grid-row">
+                      <div className="grid-row name-grid-row">
                         <div className="col-sm-6">
                           <input
                             type="text"

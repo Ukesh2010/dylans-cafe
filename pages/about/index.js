@@ -10,7 +10,7 @@ export default function About() {
       </Head>
 
       <main className="main">
-        <section className="section-container banner">
+        <section className="section-container title-section">
           <div className="container">
             <h1 className="title title-lg fancy-title">Who Are We</h1>
           </div>
@@ -19,13 +19,31 @@ export default function About() {
         <section className="section-container about-content">
           <div className="container">
             <p className="subtitle-lg">
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-              Voluptatum recusandae eius est, pariatur, quo modi sapiente optio
-              natus aliquid dignissimos, nesciunt deserunt culpa cumque libero
-              molestiae? Aliquid consequuntur animi maiores ipsa similique
-              dolorum voluptatem vitae explicabo culpa, fugit veniam voluptatum
-              placeat inventore ex debitis quasi reprehenderit deleniti ducimus
-              saepe eos.
+              Authentic Nepalese, Indian, Indo-Chinese and street foods arrive
+              in the famous Medway town Chatham High Street, delivering an
+              exclusive Multi-cuisine dining experience (Breakfast lunch and
+              dinner) under one roof of Dylan's Cafe Bar and Restaurant.
+            </p>
+            <p className="subtitle-lg">
+              All our dishes have been personally created by our Professional
+              Chefs Raju and Keshav. Both are childhood friends from the small
+              village of Bihunkot Nepal. They both have more than 20 years of
+              experience in the hospitality industry in Nepal, India, and top
+              hotels and restaurants in the UK. They developed a unique menu
+              offering an array of dishes guaranteed to satisfy the most
+              sophisticated pallets and not forget the more traditional devotee.
+            </p>
+            <p className="subtitle-lg">
+              A Culinary journey of exploration awaits you, filled with
+              innovation and delivering a truly unique experience. While our
+              culinary style represents an evolution in Indian, Nepalese, and
+              Indo-Chinese food, authenticity is the foundation of our menu. We
+              look to create a dining experience that will not be easily
+              forgotten. We believe if you cook from the heart, the rest will
+              follow. Visit us to sample our amazing cuisine alternatively, you
+              can order our delicious food for delivery from our delivery
+              partners ( Just Eat, Uber Eats, and Deliveroo) or collect to enjoy
+              a 10% Discount in the comfort of your own home.
             </p>
 
             <div className="image-block">
