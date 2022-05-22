@@ -44,10 +44,34 @@ export default function Home() {
                   <h2 className="title title-lg fancy-title">Our Story</h2>
                 </div>
                 <p className="subtitle-lg">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit,
-                  dolorum beatae laudantium earum expedita repellendus placeat
-                  voluptatem praesentium excepturi animi ullam, cumque inventore
-                  suscipit id adipisci corporis laborum odio quisquam.
+                  Authentic Nepalese, Indian, Indo-Chinese and street foods
+                  arrive in the famous Medway town Chatham High Street,
+                  delivering an exclusive Multi-cuisine dining experience
+                  (Breakfast lunch and dinner) under one roof of Dylan's Cafe
+                  Bar and Restaurant.
+                </p>
+                <p className="subtitle-lg">
+                  All our dishes have been personally created by our
+                  Professional Chefs Raju and Keshav. Both are childhood friends
+                  from the small village of Bihunkot Nepal. They both have more
+                  than 20 years of experience in the hospitality industry in
+                  Nepal, India, and top hotels and restaurants in the UK. They
+                  developed a unique menu offering an array of dishes guaranteed
+                  to satisfy the most sophisticated pallets and not forget the
+                  more traditional devotee.
+                </p>
+                <p className="subtitle-lg">
+                  A Culinary journey of exploration awaits you, filled with
+                  innovation and delivering a truly unique experience. While our
+                  culinary style represents an evolution in Indian, Nepalese,
+                  and Indo-Chinese food, authenticity is the foundation of our
+                  menu. We look to create a dining experience that will not be
+                  easily forgotten. We believe if you cook from the heart, the
+                  rest will follow. Visit us to sample our amazing cuisine
+                  alternatively, you can order our delicious food for delivery
+                  from our delivery partners ( Just Eat, Uber Eats, and
+                  Deliveroo) or collect to enjoy a 10% Discount in the comfort
+                  of your own home.
                 </p>
               </div>
             </div>
