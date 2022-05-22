@@ -29,10 +29,15 @@
 
 .fancy-title {
   font-family: "Abril Fatface", cursive;
+  letter-spacing: 0.125rem;
+}
+
+.subtitle-xl {
+  font-size: calc(var(--space-md));
 }
 
 .subtitle-lg {
-  font-size: calc(var(--space-xxs) + var(--space-sm));
+  font-size: calc(var(--space-sm) * 1.125);
 }
 
 .title-lg {

@@ -44,7 +44,7 @@
   }
 
   .main {
-    background: url("/images/banner.jpeg") no-repeat top fixed;
+    background: url("/images/bg1.jpg") no-repeat top fixed;
     background-size: cover;
   }
 
@@ -83,8 +83,10 @@
       }
 
       .link-accent {
+        display: inline-block;
         font-weight: bold;
         color: var(--color-accent);
+        margin-bottom: var(--space-md);
 
         &:hover {
           opacity: 0.8;
@@ -92,7 +94,7 @@
       }
 
       .address-block {
-        margin-top: var(--space-lg);
+        margin-top: var(--space-xxl);
       }
     }
   }
@@ -102,5 +104,14 @@
     padding: var(--space-sm) var(--space-md);
     background-color: var(--color-true-white);
     border: 1px solid var(--color-primary);
+  }
+
+  .name-grid-row {
+    gap: var(--space-md);
+    padding: 0 var(--space-sm);
+
+    > .col-sm-6 {
+      padding: 0;
+    }
   }
 }
